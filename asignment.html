@@ -4,27 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="../WK1/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <input type="text" name="color" id="Enter a color">
-    <section id="color-box" style="height: 500px; width: 500px;">
+    <input type="text" id="color-input" placeholder="Enter a color">
+    <section id="color-box" style="height: 200px; width: 500px;">
     </section>
     <button>Change Color</button>
 </body>
 <script>
     const button = document.querySelector('button')
     const colorBox = document.getElementById('color-box')
-    const input = document.querySelector('input')
+    const colorInput = document.getElementById('color-input')
 
     button.addEventListener('click', changeColor)
 
     function changeColor(){
-        let color = input.value
-        return colorBox.style.background = color
+        let color = colorInput.value
+        color = color.toLowerCase()
+        let bcolor
+
+        color == 'red'? bcolor = 'red':
+        color =='blue'? bcolor = 'blue':
+        color == 'green'? bcolor = 'green': 
+        (colorInput.value= "invalid")
+        
+
+        return colorBox.style.background = bcolor
     }
 
-    input = 'red'? color = 'red':
-    input ='blue'? color = 'blue':
-    input = 'green'? color = 'green': color.textContents = 'invalid'
 </script>
 </html>
