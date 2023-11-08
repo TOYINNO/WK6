@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>What is your year of birth</h1>
+    <p></p>
+</body>
+<script>
+    const yearOfBirth = prompt ('what is your year of birth?')
+    const currentYear = new Date().getFullYear()
+    let status
+    let status2
+    currentYear - yearOfBirth >= 18 ? status = 'You are old enough to vote' : status = 'too young to vote'
+    
+    yearOfBirth >= 2000? status2 = 'GenZ':
+    yearOfBirth >= 1990? status2 = 'millenial':
+    yearOfBirth >= 1980? status2 = 'GenX': status2 = 'Ancients'
+    
+    document.querySelector('p').innerHTML = status2
+
+</script>
+</html>

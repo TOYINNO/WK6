@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average</title>
+</head>
+<body>
+    <h1>Average Score: </h1>
+    <p></p>
+</body>
+<script>
+    const English = Number(prompt('What is your English Sore?'))
+    const Math = Number(prompt('What is your Math score?'))
+
+
+    let totalScore = English + Math 
+    let Average = totalScore / 2
+    let result
+
+    Average>=70 ? result = alert('Excellent'):
+    Average>=60 ? result = alert('VeryGood'):
+    Average>=50 ? result = alert('Good'):result = alert('fail')
+
+    document.querySelectorAll('p').innerHTML = result
+</script>
+</html>
