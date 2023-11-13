@@ -38,5 +38,18 @@ console.log(evens);
 
 const odd = assigned.filter(item => item % 2 !== 0);
 console.log(odd);
+
+//4
+const sumPositives = (assigned = []) => {
+   const isPositive = num => typeof num === 'number' && num > 0;
+   const res = assigned.reduce((acc, val) => {
+      if(isPositive(val)){
+         acc += val;
+      };
+      return acc;
+   }, 0);
+   return res;
+};
+console.log(sumPositives(assigned));
 </script>
 </html>
