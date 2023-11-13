@@ -15,6 +15,7 @@
 </body>
 <script>
     let F6B6 = 'Korede Sylvester Joseph Joba Dimeji Omolade Ore Daniel Victor Tolu Munir Chibuike Shola Ismail'
+    F6B6 = F6B6.toLowerCase()
     const ol = document.querySelector('ol')
     const students = F6B6.split(' ')
 
@@ -32,7 +33,9 @@
 
     // slice creates a new array, map creates a new array
 
-    const five = students.slice(0,5)
+    const five = students.slice()
+
+    const vowels = five.filter(name => name.startsWith('a') || name.startsWith('e') ||name.startsWith('i') || name.startsWith('o') || name.startsWith('u'))
 
     function cap(str){
         str =str.toLowerCase()
@@ -40,10 +43,13 @@
         return str
 
     }
-
+    //using map to capitalise
     const six = five.map(cap)
 
-    for(let student of six){
+   // sort names that starts with o
+   const startO = five.filter(name => name.startsWith('j'))
+
+    for(let student of vowels){
         const list = document.createElement('li')
         ol.append(list)
         // console.log(student.toUpperCase())
@@ -51,7 +57,7 @@
     }
     
 
-    console.log(students)
+    console.log(vowels)
 
 </script>
 </html>
